@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Toggle from './Toggle';
 
 const Home = () => {
   
@@ -10,6 +11,7 @@ const Home = () => {
 
   return (
     <div className=" bg-[url('./img/back-imagee.jpeg')] bg-cover sm:h-screen lg:h-screen w-full md:flex"> 
+    
       <div className="pt-20 px-4 brightness-100 blur-none backdrop-blur-sm text-white   md:w-3/4"> 
          <h1 className='text-white text-center   text-[30px] font-bold  font-indie md:text-[40px]'> Countries and Continents Facts Zone   </h1> 
 
