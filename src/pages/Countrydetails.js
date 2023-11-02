@@ -5,19 +5,14 @@ import { useNavigate, useLocation } from 'react-router';
 
 function Countrydetails() {
    const [mode, setMode] = useState(true)
-  
-
        let {state} = useLocation()
-     
-
- 
     const  navigate = useNavigate();
+    const fixNum = (x) => {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
  
   return (
     <div className='bg-gray-100 dark:bg-gray-800 dark:text-white overflow-hidden border-2 border-gray-300 dark:border-gray-700 mx-4 shadow-md lg:max-w-[1000px]  md:max-w-[800px] md:mx-auto mt-14'>
-
-        
-           
          <div className=" ml-8 mx-auto mb-16 mt-4">
                 <button className="px-8 py-2 bg-white text-gray-600 shadow-md dark:bg-gray-700 dark:text-white rounded-lg" onClick={() => navigate(-1)}>
                     <i className="fa fa-arrow-left"/>  Back </button>
@@ -31,7 +26,7 @@ function Countrydetails() {
                     <h2 className="font-bold text-2xl mb-8">{state.name}</h2>
                     <div className="flex flex-col  lg:grid grid-cols-2 gap-x-20 gap-y-4 leading-4 text-[20px] lg:text-[16px]">
                         <p className='font-semibold '>Native Name: <span className="dark:text-gray-400 font-normal  text-gray-700 ">{state.nativeName}</span></p>
-                        <p className='font-semibold '>Population: <span className="dark:text-gray-400 font-normal  text-gray-700 ">{state.population}</span></p>
+                        <p className='font-semibold '>Population: <span className="dark:text-gray-400 font-normal  text-gray-700 "> {fixNum(state.population)}</span></p>
                         <p className='font-semibold'>Region: <span className="dark:text-gray-400 font-normal  text-gray-700 ">{state.region}</span></p>
                        
                         <p className='font-semibold '>Capital: <span className="dark:text-gray-400 font-normal  text-gray-700 ">{state.capital}</span></p>

@@ -90,7 +90,7 @@ const Allcountries = () => {
             <div className=' '>
 
 
-                <div className='flex container mx-auto mb-16'>
+                <div className='flex container mx-auto mb-10'>
 
                     <i class="fa fa-search my-auto -mr-9 z-10 pr-2 pl-3 py-5 rounded-md text-gray-400"> </i>
                     <input type="text" placeholder="search countries" className="pl-10 p-2 shadow-md rounded-md w-1/2 lg:w-1/3 min-w-[150px] h-[40px] mt-2 dark:bg-gray-700" onChange={term => searchCountries(term.target.value)} >
@@ -129,7 +129,9 @@ const Allcountries = () => {
                             population={country.population}
                             region={country.region}
                             capital={country.capital}
-                        /></Link>)}
+                        />
+                        
+                        </Link>)}
                 </div>
             </div>
         </section>
