@@ -84,7 +84,7 @@ const Allcountries = () => {
                 {loading && <div className="text-center text-sm md:mt-[10%] mt-[40%]" >Loading, Please wait...</div>}
 
 {!loading && (
-    <div  className="container w-[100%] mb-4 items-center wrap grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 font-bold gap-4 lg:gap-8 md:gap-8 mx-auto ">
+    <div  className="container w-[100%] mb-4 items-center wrap grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 2xl:grid-cols-6 font-bold gap-4 lg:gap-8 md:gap-8 mx-auto ">
         {countries.map((country, index) => (
             <Link to="/countrydetails"
                 state={country}
