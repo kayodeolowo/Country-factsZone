@@ -15,8 +15,8 @@ function App() {
           
            <Route path='/countrydetails' element= {<Countrydetails/>}/>
            
-             <Route path='/Allcountries' element= {<Allcountries/>}/>
-            <Route path='/' element={<Home/>}/>
+             <Route path='/' element= {<Allcountries/>}/>
+           
             
         </Routes> 
         

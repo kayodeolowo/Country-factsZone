@@ -4,7 +4,6 @@ import Toggle from './pages/Toggle'
 const Navbar = () => {
   return (
     <div>Navbar
-
         <Toggle/>
     </div>
   )
