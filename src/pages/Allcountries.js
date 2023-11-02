@@ -6,10 +6,6 @@ import 'aos/dist/aos.css';
 import Toggle from './Toggle';
 
 
-
-
-
-
 const Allcountries = () => {
     const [countries, setCountries] = useState([])
     const [mode, setMode] = useState(true)
@@ -21,10 +17,6 @@ const Allcountries = () => {
         Aos.init({ duration: 2000 });
     }, [])
 
-
-
-
-
     const getCountries = async () => {
         const res = await fetch('https://restcountries.com/v2/all')
         const data = await res.json()
@@ -34,8 +26,6 @@ const Allcountries = () => {
     //fetch all countries
 
     const searchCountries = async term => {
-
-
         if (term.length < 0 || term === '')
             return
         const res = await fetch(`https://restcountries.com/v2/name/${term}`)
@@ -61,7 +51,6 @@ const Allcountries = () => {
     }
 
 
-
     const filterRegion = async region => {
         if (region === '')
             return
@@ -69,10 +58,6 @@ const Allcountries = () => {
         const data = await res.json()
         await setCountries(data)
     }
-
-
-
-
 
     return (
 
@@ -88,18 +73,10 @@ const Allcountries = () => {
             </div>
 
             <div className=' '>
-
-
                 <div className='flex container mx-auto mb-10'>
-
                     <i class="fa fa-search my-auto -mr-9 z-10 pr-2 pl-3 py-5 rounded-md text-gray-400"> </i>
                     <input type="text" placeholder="search countries" className="pl-10 p-2 shadow-md rounded-md w-1/2 lg:w-1/3 min-w-[150px] h-[40px] mt-2 dark:bg-gray-700" onChange={term => searchCountries(term.target.value)} >
-
                     </input>
-
-
-
-
                     <select className="ml-auto my-2 p-2 shadow-md rounded-md  w-1/3 font-medium dark:bg-gray-700" onChange={val => filterRegion(val.target.value)}>
                         <option value="">Filter by Region</option>
                         <option value="africa">Africa</option>
@@ -116,11 +93,8 @@ const Allcountries = () => {
                         <img className='h-10 w-10 animate-spin' src="./image/earth.png" />
                         <h1 className=' mt-2'>Loading</h1>
                     </div>}
-
                 </div>
-
-
-                <div data-aos="fade-left" className="container w-[100%]  items-center wrap grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 font-bold gap-4 lg:gap-8 md:gap-8 mx-auto  ">
+                <div data-aos="fade-left" className="container w-[100%]  mb-4 items-center wrap grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 font-bold gap-4 lg:gap-8 md:gap-8 mx-auto  ">
                     {countries.map((country, index) => <Link to="/countrydetails"
                         state={country}
                         key={index}><Details
@@ -129,8 +103,7 @@ const Allcountries = () => {
                             population={country.population}
                             region={country.region}
                             capital={country.capital}
-                        />
-                        
+                        />                      
                         </Link>)}
                 </div>
             </div>

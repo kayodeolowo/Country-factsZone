@@ -33,7 +33,7 @@ function Details({ title, image_url, population, region, capital }) {
     return (
 
         <div className="container rounded-lg shadow-lg  dark:bg-gray-700 dark:text-white pb-1 hover:bg-gray-200 dark:hover:bg-gray-900">
-            <img src={image_url} className="h-[8rem] md:h-[9rem] object-cover w-full rounded-t-lg" alt={title} />
+            <img src={image_url} className="h-[8rem] md:h-[7rem] xl:h-[9rem] object-cover w-full rounded-t-lg" alt={title} />
 
             <div className="p-2">
                 <h3 style={titleStyle} className="font-bold ">{title}</h3>
