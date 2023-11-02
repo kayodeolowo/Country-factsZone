@@ -4,6 +4,7 @@ import Details from './Details'
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Toggle from './Toggle';
+import Footer from './Footer'
 
 
 const Allcountries = () => {
@@ -107,6 +108,8 @@ const Allcountries = () => {
                         </Link>)}
                 </div>
             </div>
+
+            {loading && <Footer />}
         </section>
 
     )
